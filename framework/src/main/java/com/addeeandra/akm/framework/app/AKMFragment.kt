@@ -14,7 +14,7 @@ abstract class AKMFragment<out T : ViewDataBinding, out V : AKMViewModel>(resour
 
     protected abstract val viewModel: V
 
-    private val viewBinding: T by lazy {
+    protected val viewBinding: T by lazy {
         DataBindingUtil.inflate(
             layoutInflater,
             resource,

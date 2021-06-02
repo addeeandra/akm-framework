@@ -14,7 +14,7 @@ abstract class AKMDialogFragment<out T : ViewDataBinding, out V : AKMViewModel>(
 
     protected abstract val viewModel: V
 
-    private val viewBinding: T by lazy {
+    protected val viewBinding: T by lazy {
         DataBindingUtil.inflate(
             layoutInflater,
             resource,
