@@ -22,6 +22,7 @@ class MutableLiveEvent<T> : LiveEvent<T>() {
      * Push a new Action's value.
      */
     fun push(value: T) {
+        pending.set(true)
         this.value = ActionEvent(value)
     }
 
